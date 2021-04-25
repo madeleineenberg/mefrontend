@@ -1,0 +1,91 @@
+.c-faq-container {
+  margin-bottom: 20%;
+}
+
+.c-faq_heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 5%;
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  @media (min-width: $ipad) {
+    padding: 3% 10%;
+  }
+
+  &:hover {
+    background-color: $oliv-green;
+    .c-faq_heading {
+      color: $matte-black;
+    }
+    .icon-down-dir {
+      background-color: $oliv-green;
+      color: $matte-black;
+    }
+  }
+
+  &.visible {
+    background-color: $oliv-green;
+    transition: all 0.4s ease;
+    .c-faq_heading {
+      color: $matte-black;
+    }
+  }
+
+  .c-faq_heading {
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 15px;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    @media (min-width: $ipad) {
+      font-size: 24px;
+    }
+  }
+
+  span {
+    cursor: pointer;
+    .icon-up-dir {
+      color: $matte-black;
+      background-color: $oliv-green;
+      font-size: 30px;
+      transition: all 0.4s ease;
+
+      @media (min-width: $ipad) {
+        font-size: 40px;
+      }
+    }
+    .icon-down-dir {
+      color: $creme-white;
+      background-color: $matte-black;
+      font-size: 30px;
+      transition: all 0.4s ease;
+
+      @media (min-width: $ipad) {
+        font-size: 40px;
+      }
+    }
+  }
+}
+
+.c-faq-text {
+  padding: 5% 5%;
+  background-color: $oliv-green;
+  color: $matte-black;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 35px;
+  font-size: 16px;
+  letter-spacing: 2px;
+
+  @media (min-width: $ipad) {
+    font-size: 24px;
+    padding: 3% 10%;
+  }
+
+  p {
+    padding-bottom: 20px;
+  }
+}

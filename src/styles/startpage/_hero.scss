@@ -1,0 +1,133 @@
+header {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+
+  &::after {
+    display: none;
+    @media (min-width: $ipad-pro) {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: 30%;
+      @include sticker-large;
+      transform: rotate(90deg);
+    }
+  }
+
+  //   .wrapper {
+  //     position: sticky;
+  //     top: 0;
+  //   }
+  .startpage-title {
+    @include yellow-title;
+    font-size: 150px;
+    // line-height: 144px;
+    transform: rotate(-90deg);
+    position: absolute;
+
+    top: 240vw;
+    left: -370px;
+
+    @media (min-width: $ipad) {
+      font-size: 288px;
+      top: 1400px;
+      //   top: 800px;
+      left: -650px;
+    }
+  }
+
+  .hero-image_wrapper {
+    min-width: 230px;
+    max-width: 280px;
+    height: auto;
+    position: relative;
+    padding-top: 20px;
+    margin: 20% auto;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: -20px;
+      @include sticker-small;
+
+      @media (min-width: $ipad) {
+        @include sticker-large;
+        top: -10px;
+      }
+    }
+
+    @media (min-width: $ipad) {
+      max-width: 430px;
+      margin: 15% 20%;
+      align-self: flex-end;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: 700px;
+      margin-top: 10%;
+    }
+
+    img {
+      @include img;
+    }
+
+    p {
+      color: $mustard-yellow;
+      text-transform: uppercase;
+      line-height: 18px;
+      font-size: 14px;
+      letter-spacing: 2px;
+      transition-delay: 0.3s;
+
+      @media (min-width: $ipad) {
+        font-size: 16px;
+        letter-spacing: 4px;
+        max-width: 400px;
+        margin-top: 15px;
+      }
+    }
+  }
+  .hero-side-text {
+    display: none;
+
+    @media (min-width: $ipad) {
+      display: block;
+      @include small-side-text;
+      position: absolute;
+      top: 250px;
+      right: -100px;
+    }
+  }
+
+  .hero-illustration-wrapper {
+    min-width: 100px;
+    max-width: 100px;
+    margin-top: -40px;
+    align-self: flex-end;
+    z-index: 1;
+
+    @media (min-width: $ipad) {
+      max-width: 180px;
+    }
+
+    @media (min-width: $ipad-pro) {
+      position: absolute;
+      bottom: 10px;
+      right: 50px;
+    }
+    @media (min-width: $desktop) {
+      bottom: 150px;
+    }
+
+    img {
+      @include img;
+      filter: drop-shadow(15px 15px 8px rgba(0, 0, 0, 0.5));
+    }
+  }
+}

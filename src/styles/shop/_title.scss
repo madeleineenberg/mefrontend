@@ -1,0 +1,13 @@
+.s-intro-text {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 0 50px;
+
+  @media (min-width: $ipad) {
+    font-size: 24px;
+  }
+}

@@ -1,0 +1,46 @@
+.title-section {
+  // width: 100vw;
+  height: 40vh;
+  text-align: center;
+  padding-top: 10%;
+
+  @media (min-width: $ipad-pro) {
+    height: 50vh;
+  }
+
+  @media (min-width: $laptop) {
+    height: 75vh;
+  }
+
+  .a-header_title_line:first-child {
+    transition-delay: 0.2s;
+  }
+  .a-header_title_line:nth-child(2) {
+    transition-delay: 0.3s;
+  }
+  .a-header_title_line:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+  .a-header_title_line:nth-child(4) {
+    transition-delay: 0.5s;
+  }
+  .a-header_title_line span {
+    display: inline-block;
+  }
+  .a-h1 {
+    @include yellow-title;
+    font-size: 72px;
+
+    @media (min-width: $ipad) {
+      font-size: 160px;
+    }
+
+    @media (min-width: $ipad-pro) {
+      font-size: 200px;
+    }
+
+    @media (min-width: $laptop) {
+      font-size: 288px;
+    }
+  }
+}

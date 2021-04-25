@@ -1,0 +1,82 @@
+.c-intro-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50%;
+  // margin-left: 10%;
+  padding: 8%;
+
+  @media (min-width: $ipad) {
+    flex-direction: row;
+    padding: 5%;
+    margin-left: 10%;
+    margin-bottom: 15%;
+  }
+
+  @media (min-width: $ipad-pro) {
+    margin-left: 10%;
+    padding: 0;
+  }
+
+  @media (min-width: $laptop) {
+    margin-left: 0;
+  }
+
+  .c-intro_text-wrapper {
+    max-width: 600px;
+
+    @media (min-width: $laptop) {
+      max-width: 700px;
+    }
+
+    .c-intro_text {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      max-width: 500px;
+
+      @media (min-width: $ipad-pro) {
+        font-size: 20px;
+        line-height: 34px;
+      }
+
+      @media (min-width: $laptop) {
+        font-size: 24px;
+        max-width: 650px;
+      }
+
+      p {
+        padding-top: 20px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      font-family: $lato;
+      font-weight: 200;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 20px;
+      letter-spacing: 2px;
+      color: $oliv-green;
+
+      @media (min-width: $ipad) {
+        font-size: 22px;
+      }
+
+      @media (min-width: $ipad-pro) {
+        font-size: 28px;
+      }
+
+      @media (min-width: $laptop) {
+        font-size: 36px;
+      }
+    }
+  }
+}

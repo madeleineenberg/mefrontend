@@ -1,0 +1,129 @@
+.cart-modal {
+  background-color: $oliv-green;
+  position: absolute;
+  top: 110px;
+  right: 40px;
+  z-index: 1;
+  width: 300px;
+
+  @media (min-width: $ipad) {
+    width: 400px;
+  }
+}
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5% 3% 3% 3%;
+  color: $matte-black;
+  letter-spacing: 2px;
+
+  .cart-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
+
+    &__image-wrapper {
+      max-width: 100px;
+      flex: 1;
+      align-self: stretch;
+      img {
+        @include img;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: $matte-black;
+      flex: 1;
+      align-self: stretch;
+      max-width: 100px;
+
+      h3 {
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+      }
+      p {
+        padding-top: 10px;
+        letter-spacing: 2px;
+        font-size: 14px;
+        line-height: 14px;
+      }
+
+      .outofstock {
+        text-align: center;
+        color: coral;
+        font-size: 10px;
+      }
+    }
+    &__buttons {
+      display: flex;
+      padding: 10px;
+      button {
+        border: none;
+        padding: 10px;
+        background-color: $creme-white;
+        color: $matte-black;
+        outline: black;
+      }
+    }
+  }
+
+  &-checkout-container {
+    background-color: $matte-black;
+    color: $creme-white;
+    font-family: $lato;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    align-self: stretch;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      color: $creme-white;
+      text-decoration: none;
+      transition: color 0.6s ease;
+      &:hover {
+        color: $mustard-yellow;
+      }
+    }
+
+    .icon-cc-paypal {
+      font-size: 18px;
+    }
+  }
+
+  .empty-cart {
+    align-self: flex-end;
+    margin-bottom: 10px;
+    background-color: $oliv-green;
+    border: none;
+    padding-right: 10px;
+    padding-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.6s ease;
+
+    &:hover {
+      color: $mustard-yellow;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}

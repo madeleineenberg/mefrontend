@@ -1,0 +1,20 @@
+.p-title {
+  @include yellow-title;
+  transform: rotate(-90deg);
+  position: absolute;
+  font-size: 100px;
+  top: 650px;
+  left: -285px;
+
+  @media (min-width: $ipad) {
+    font-size: 200px;
+    top: 750px;
+    left: -520px;
+  }
+
+  @media (min-width: $ipad-pro) {
+    font-size: 288px;
+    left: -720px;
+    top: 900px;
+  }
+}

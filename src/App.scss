@@ -1,0 +1,39 @@
+@import './styles/variables';
+@import './styles/mixins';
+@import './styles/global';
+@import './styles/base';
+@import './styles/navigation';
+@import './styles/menu-icon';
+@import './styles/footer';
+
+//startpage
+@import './styles/startpage/hero';
+@import './styles/startpage/startpage-section';
+@import './styles/startpage/startpage-gallery';
+
+//aboutpage
+@import './styles/aboutpage/title-section';
+@import './styles/aboutpage/about-info';
+@import './styles/aboutpage/about-image';
+@import './styles/aboutpage/work-info';
+@import './styles/aboutpage/image-section';
+
+//contact
+@import './styles/contactpage/illustration';
+@import './styles/contactpage/intro-section';
+@import './styles/contactpage/info-title';
+@import './styles/contactpage/faq-section';
+
+//portfolio
+@import './styles/portfoliopage/portfolio-title';
+@import './styles/portfoliopage/modal';
+@import './styles/portfoliopage/image-grid';
+
+//shop
+@import './styles/shop/title';
+@import './styles/shop/product-card';
+@import './styles/shop/cart-modal';
+
+//checkout
+@import './styles/checkout/checkout';
+@import './styles/checkout/_succsess-modal';

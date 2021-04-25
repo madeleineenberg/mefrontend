@@ -1,0 +1,14 @@
+.c-heading-wrapper {
+  width: 100%;
+
+  .c-heading {
+    text-align: center;
+    @include yellow-title;
+    font-size: 96px;
+    margin-bottom: 3%;
+
+    @media (min-width: $ipad) {
+      font-size: 200px;
+    }
+  }
+}

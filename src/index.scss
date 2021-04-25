@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+//LEKTON FONT 
+
+@font-face {
+  font-family: "Lekton";
+  src: local("Lekton"),
+    url("./fonts/Lekton/Lekton\ 400.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lekton";
+  src: local("Lekton"),
+    url("./fonts/Lekton/Lekton-Bold\ 700.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lekton";
+  src: local("Lekton"),
+    url("./fonts/Lekton/Lekton-Italic\ 400.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+//LATO FONT
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"),
+    url("./fonts/Lato/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"),
+    url("./fonts/Lato/Lato-ThinItalic.ttf") format("truetype");
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"),
+    url("./fonts/Lato/Lato-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+
+

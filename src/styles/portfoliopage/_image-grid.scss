@@ -1,0 +1,287 @@
+.grid-style-one {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, 200px);
+  padding: 8% 5% 20% 15%;
+
+  @media (min-width: $ipad) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, 280px);
+  }
+
+  @media (min-width: $ipad-pro) {
+    grid-auto-rows: minmax(300px, 400px);
+  }
+
+  @media (min-width: $laptop) {
+    grid-auto-rows: minmax(400px, 550px);
+  }
+
+  .image-wrapper {
+    opacity: 0.8;
+    cursor: pointer;
+    img {
+      @include img;
+    }
+
+    @media only screen and (max-width: $ipad) and (min-width: $mobile) {
+      &:nth-of-type(3) {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    }
+  }
+
+  .grid-title {
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $ipad) {
+      grid-column: 2;
+    }
+
+    p {
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 2px;
+
+      @media (min-width: $ipad) {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.grid-style-two {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, 200px);
+  padding: 8% 5% 20% 15%;
+
+  @media (min-width: $ipad) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, 280px);
+  }
+
+  @media (min-width: $ipad-pro) {
+    grid-auto-rows: minmax(300px, 400px);
+  }
+
+  @media (min-width: $laptop) {
+    grid-auto-rows: minmax(400px, 550px);
+  }
+
+  .image-wrapper {
+    opacity: 0.8;
+    cursor: pointer;
+    img {
+      @include img;
+    }
+
+    &:nth-of-type(2) {
+      grid-column: 1;
+
+      @media (min-width: $ipad) {
+        grid-column: 2;
+      }
+    }
+
+    &:nth-of-type(6) {
+      grid-column: 1;
+      grid-row: 4;
+      @media (min-width: $ipad) {
+        grid-column: 3;
+        grid-row: 3;
+      }
+    }
+    &:nth-of-type(7) {
+      grid-column: 2;
+      grid-row: 4;
+      @media (min-width: $ipad) {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    }
+    &:nth-of-type(8) {
+      grid-column: 2;
+      grid-row: 5;
+      @media (min-width: $ipad) {
+        grid-column: 1;
+        grid-row: 4;
+      }
+    }
+    &:nth-of-type(9) {
+      grid-column: 1;
+      grid-row: 6;
+      @media (min-width: $ipad) {
+        grid-column: 2;
+        grid-row: 4;
+      }
+    }
+  }
+
+  .grid-title {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: $ipad) {
+      grid-column: 3;
+    }
+
+    p {
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 2px;
+
+      @media (min-width: $ipad) {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.grid-style-three {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, 200px);
+  padding: 8% 5% 20% 15%;
+
+  @media (min-width: $ipad) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, 280px);
+  }
+
+  @media (min-width: $ipad-pro) {
+    grid-auto-rows: minmax(300px, 400px);
+  }
+
+  @media (min-width: $laptop) {
+    grid-auto-rows: minmax(400px, 550px);
+  }
+
+  .image-wrapper {
+    opacity: 0.8;
+    cursor: pointer;
+    img {
+      @include img;
+    }
+    &:nth-of-type(5) {
+      @media (min-width: $ipad) {
+        grid-column: 2;
+        grid-row: 2;
+      }
+    }
+    &:nth-of-type(6) {
+      @media (min-width: $ipad) {
+        grid-column: 1;
+        grid-row: 3;
+      }
+    }
+    &:nth-of-type(7) {
+      @media (min-width: $ipad) {
+        grid-column: 2;
+        grid-row: 3;
+      }
+    }
+    &:nth-of-type(8) {
+      @media (min-width: $ipad) {
+        grid-column: 3;
+        grid-row: 3;
+      }
+    }
+    &:nth-of-type(9) {
+      @media (min-width: $ipad) {
+        grid-column: 3;
+        grid-row: 4;
+      }
+    }
+  }
+  .grid-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1;
+    grid-row: 2;
+
+    @media (min-width: $ipad) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    p {
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 2px;
+
+      @media (min-width: $ipad) {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.grid-style-four {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: minmax(100px, 200px);
+  padding: 8% 5% 20% 15%;
+
+  @media (min-width: $ipad) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(200px, 280px);
+  }
+
+  @media (min-width: $ipad-pro) {
+    grid-auto-rows: minmax(300px, 400px);
+  }
+
+  @media (min-width: $laptop) {
+    grid-auto-rows: minmax(400px, 550px);
+  }
+  .image-wrapper {
+    opacity: 0.8;
+    cursor: pointer;
+    img {
+      @include img;
+    }
+  }
+  .grid-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 2;
+
+    @media (min-width: $ipad) {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    p {
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 36px;
+      letter-spacing: 2px;
+
+      @media (min-width: $ipad) {
+        font-size: 36px;
+      }
+    }
+  }
+}

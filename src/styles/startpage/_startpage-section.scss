@@ -1,0 +1,98 @@
+.startpage-section {
+  background-color: $creme-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  // padding: 20% 0;
+
+  @media (min-width: $laptop) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .section_image-wrapper {
+    flex: 1;
+    min-width: 250px;
+    margin: 5% 0;
+
+    @media (min-width: $ipad) {
+      min-width: 750px;
+    }
+
+    img {
+      @include img;
+    }
+  }
+
+  .section_illustration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 300px;
+    margin: 10% auto;
+    align-self: center;
+
+    @media (min-width: $ipad) {
+      max-width: 600px;
+    }
+    @media (min-width: $laptop) {
+      max-width: 550px;
+      margin: 10%;
+    }
+
+    @media (min-width: $desktop) {
+      margin: 10%;
+      flex: 1;
+      position: sticky;
+      top: 20px;
+    }
+
+    h3 {
+      color: $mustard-yellow;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      line-height: 18px;
+      font-size: 18px;
+      font-weight: 400;
+      text-align: center;
+
+      @media (min-width: $ipad) {
+        line-height: 36px;
+        font-size: 36px;
+      }
+    }
+
+    .section_illustration-wrapper {
+      min-width: 250px;
+      padding-top: 5%;
+
+      @media (min-width: $ipad) {
+        min-width: 400px;
+      }
+
+      img {
+        @include img;
+      }
+    }
+  }
+
+  .section_illustration-text {
+    color: $matte-black;
+    max-width: 550px;
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.08em;
+    position: absolute;
+    bottom: 40%;
+    left: -10px;
+
+    @media (min-width: $ipad) {
+      font-size: 18px;
+      line-height: 20px;
+      left: -50px;
+    }
+  }
+}

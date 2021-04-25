@@ -1,0 +1,169 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+
+  @media (min-width: $laptop) {
+    padding: 30px;
+  }
+
+  .naviagation-logo {
+    flex: 2;
+    margin-left: -25px;
+
+    @media (min-width: $laptop) {
+      margin-left: 0;
+    }
+
+    .navigation-logo_wrapper {
+      max-width: 150px;
+
+      @media (min-width: $ipad) {
+        max-width: 200px;
+      }
+      img {
+        @include img;
+      }
+    }
+  }
+
+  .cart-button {
+    background-color: $matte-black;
+    color: $creme-white;
+    border: none;
+    outline: $matte-black;
+    font-family: $lato;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: 60px;
+    right: 80px;
+
+    @media (min-width: $ipad) {
+      top: 75px;
+      right: 100px;
+    }
+
+    @media (min-width: $laptop) {
+      top: 65px;
+      right: 30px;
+    }
+  }
+
+  .nav-menu {
+    @media only screen and (max-width: $laptop) and (min-width: 250px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 0;
+      height: 0;
+      top: 0;
+      left: 100%;
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+      list-style-type: none;
+      overflow: hidden;
+
+      &.active {
+        background: $matte-black;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        opacity: 0.98;
+        transition: opacity 0.4s ease-in-out;
+        z-index: 2;
+        align-content: center;
+        padding-left: 0px;
+      }
+    }
+
+    @media (min-width: $laptop) {
+      display: flex;
+      opacity: 1;
+      flex: 1;
+      justify-content: space-around;
+      list-style: none;
+    }
+
+    .navlink-title {
+      font-family: $lato;
+      font-weight: 200px;
+      font-size: 42px;
+      font-style: italic;
+      text-decoration: none;
+      text-align: center;
+      color: black;
+      line-height: 40px;
+      transition: color 0.6s ease;
+
+      @media (min-width: $ipad) {
+        font-size: 72px;
+        line-height: 60px;
+      }
+      @media (min-width: $laptop) {
+        color: $creme-white;
+        font-family: $lato;
+        font-weight: 400;
+        font-size: 14px;
+        letter-spacing: 2px;
+        line-height: 16px;
+        font-style: normal;
+      }
+
+      &:hover {
+        color: $oliv-green;
+      }
+
+      &:hover .navlink-dot {
+        opacity: 1;
+      }
+    }
+
+    &-item {
+      &:first-of-type {
+        display: block;
+        padding-bottom: 50px;
+        @media (min-width: $laptop) {
+          display: none;
+        }
+      }
+    }
+
+    .navlink-dot-active > .navlink-dot {
+      margin-top: -0.1rem;
+      display: block;
+      opacity: 1;
+    }
+
+    .navlink-dot {
+      margin-top: -0.1rem;
+      opacity: 0;
+      font-size: 30px;
+      color: $mustard-yellow;
+      transition: opacity 200ms linear;
+    }
+  }
+  .mobile-menu {
+    visibility: visible;
+    z-index: 2;
+
+    .icon-dot-3 {
+      font-size: 25px;
+      transition: all 0.6s linear;
+      color: $creme-white;
+    }
+
+    .icon-cancel-3 {
+      font-size: 25px;
+      transition: all 0.6s linear;
+      color: $creme-white;
+    }
+    @media (min-width: $laptop) {
+      visibility: hidden;
+    }
+  }
+}

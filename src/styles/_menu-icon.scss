@@ -1,0 +1,75 @@
+button.m-dots {
+  width: 32px;
+  height: 25px;
+  border: none;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+
+  @media (min-width: $ipad) {
+    width: 60px;
+    height: 30px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  //  Menu Burger 1
+  &.m-dots {
+    &:after,
+    &:before,
+    span {
+      width: 10%;
+      height: 20%;
+      border-radius: 100px;
+      position: absolute;
+      left: 0px;
+      background: $creme-white;
+      transform: rotate(0deg);
+      transition: all 0.4s;
+
+      left: 1%;
+      right: 1%;
+      margin: 0 auto;
+    }
+
+    &:after,
+    &:before {
+      content: '';
+    }
+
+    &:after {
+      top: -10%;
+      margin-top: 0px;
+    }
+
+    &:before {
+      bottom: -10%;
+      margin-bottom: 0px;
+    }
+
+    span {
+      top: 50%;
+      margin-top: -2px;
+    }
+
+    &.on {
+      &:after {
+        transform: rotate(135deg) translate(9px, -9px);
+        width: 100%;
+      }
+
+      &:before {
+        transform: rotate(225deg);
+        bottom: 50%;
+        margin-bottom: -2px;
+        width: 100%;
+      }
+
+      span {
+        transform: rotate(135deg);
+      }
+    }
+  }
+}

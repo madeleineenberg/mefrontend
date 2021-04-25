@@ -1,0 +1,135 @@
+.w-info-section {
+  background-color: $creme-white;
+  color: $matte-black;
+  height: 550px;
+  // width: 100vw;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  top: -10px;
+
+  @media (min-width: $ipad) {
+    height: 700px;
+  }
+
+  @media (min-width: $ipad-pro) {
+    height: 1100px;
+  }
+
+  @media (min-width: $laptop) {
+    top: 0;
+  }
+
+  .w-info_title {
+    color: $mustard-yellow;
+    transform: rotate(90deg);
+    position: sticky;
+    top: 200px;
+    left: 90%;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-top: -150px;
+
+    margin-bottom: 80px;
+    margin-right: -110px;
+
+    @media (min-width: $ipad) {
+      font-size: 24px;
+      margin-right: -100px;
+    }
+
+    @media (min-width: $ipad-pro) {
+      margin-bottom: 100px;
+      font-size: 28px;
+      margin-top: 180px;
+      margin-right: 0;
+    }
+
+    @media (min-width: $laptop) {
+      margin-top: 285px;
+      margin-bottom: 130px;
+      font-size: 36px;
+    }
+
+    img {
+      max-width: 25px;
+      height: auto;
+      transform: rotate(90deg);
+      margin: 5px 20px 0 20px;
+
+      @media (min-width: $ipad) {
+        max-width: 50px;
+      }
+    }
+  }
+}
+.w-info_description-wrapper {
+  background: $oliv-green;
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  right: 0;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 100px;
+  padding: 10%;
+
+  @media (min-width: $ipad) {
+    min-height: 600px;
+    padding: 5%;
+    right: 100px;
+  }
+
+  @media (min-width: $ipad-pro) {
+    min-height: 800px;
+    padding: 5%;
+    bottom: 100px;
+    right: 300px;
+  }
+
+  .w-info_description-part1 {
+    color: $matte-black;
+    font-size: 18px;
+    line-height: 25px;
+
+    p:first-child {
+      color: $mustard-yellow;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 14px;
+      font-size: 14px;
+
+      @media (min-width: $ipad) {
+        line-height: 22px;
+        font-size: 22px;
+      }
+
+      @media (min-width: $ipad-pro) {
+        line-height: 40.16px;
+        font-size: 28px;
+      }
+    }
+    p {
+      padding-bottom: 20px;
+    }
+  }
+  .w-info_description-part2 {
+    color: $matte-black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 14px;
+    font-size: 14px;
+
+    @media (min-width: $ipad) {
+      line-height: 22px;
+      font-size: 22px;
+    }
+
+    @media (min-width: $ipad-pro) {
+      line-height: 40.16px;
+      font-size: 28px;
+    }
+  }
+}

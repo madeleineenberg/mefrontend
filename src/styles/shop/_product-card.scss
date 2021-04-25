@@ -1,0 +1,202 @@
+.product-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  list-style: none;
+  gap: 15px;
+
+  @media (min-width: $ipad) {
+    padding: 15%;
+  }
+
+  @media (min-width: $ipad-pro) {
+    padding: 5%;
+  }
+
+  @media (min-width: $laptop) {
+    padding: 15%;
+  }
+
+  .product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: $matte-black;
+
+    @media (min-width: $ipad-pro) {
+      flex-direction: row;
+    }
+
+    &:nth-of-type(even) {
+      @media (min-width: $ipad-pro) {
+        flex-flow: row-reverse;
+      }
+    }
+
+    &-image-wrapper {
+      flex: 1;
+      width: 100%;
+      align-self: stretch;
+      position: relative;
+      img {
+        @include img;
+      }
+
+      &.sold-out::after {
+        content: '';
+        width: 105px;
+        height: 100px;
+        background-color: $oliv-green;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+      }
+      &.sold-out::before {
+        content: 'SOLD OUT';
+        position: absolute;
+        font-family: $lato;
+        color: coral;
+        font-size: 12px;
+        line-height: 15px;
+        letter-spacing: 2px;
+        top: 68px;
+        left: 32px;
+        z-index: 1;
+
+        @media (min-width: $ipad) {
+          top: 85px;
+          left: 40px;
+        }
+
+        @media (min-width: $ipad-pro) {
+          top: 80px;
+          left: 38px;
+        }
+
+        @media screen and (min-width: $laptop) {
+          top: 83px;
+          left: 43px;
+        }
+      }
+    }
+
+    &-content {
+      flex: 1;
+      align-self: stretch;
+      background-color: $oliv-green;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h3 {
+        color: $matte-black;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 2px;
+        padding-top: 25%;
+      }
+
+      .price {
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 2px;
+        padding-top: 15px;
+      }
+
+      .stock {
+        align-self: flex-start;
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: olive;
+        padding-left: 10%;
+        margin-top: 20%;
+
+        &.outofstock {
+          color: coral;
+        }
+      }
+
+      &__description {
+        padding: 0 10% 10% 10%;
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          letter-spacing: 2px;
+          line-height: 20px;
+          color: $mustard-yellow;
+          padding-top: 20px;
+
+          @media (min-width: $ipad) {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .product-buttons {
+        // align-self: flex-end;
+        // padding-right: 3%;
+        margin-bottom: 5%;
+
+        @media (max-width: $ipad) {
+          text-align: center;
+        }
+        button {
+          width: 200px;
+          height: 55px;
+          font-family: $lato;
+          margin: 10px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          outline: $matte-black;
+          font-size: 12px;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.5s ease;
+        }
+
+        .add {
+          background-color: $matte-black;
+          color: $creme-white;
+          border: none;
+
+          &:hover {
+            color: $mustard-yellow;
+          }
+
+          &.disabled {
+            opacity: 0.8;
+            cursor: auto;
+
+            &:hover {
+              color: $creme-white;
+            }
+          }
+        }
+
+        .remove {
+          background-color: $oliv-green;
+          color: $matte-black;
+          border: 3px solid $matte-black;
+          box-shadow: inset 0px 0px 0px $matte-black;
+
+          &:hover {
+            box-shadow: inset 0px -80px 0px $matte-black;
+            color: $mustard-yellow;
+          }
+        }
+      }
+    }
+  }
+}
