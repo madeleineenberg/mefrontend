@@ -19,10 +19,6 @@ header {
     }
   }
 
-  //   .wrapper {
-  //     position: sticky;
-  //     top: 0;
-  //   }
   .startpage-title {
     @include yellow-title;
     font-size: 150px;
@@ -69,7 +65,7 @@ header {
     }
 
     @media (min-width: $desktop) {
-      max-width: 700px;
+      max-width: 600px;
       margin-top: 10%;
     }
 

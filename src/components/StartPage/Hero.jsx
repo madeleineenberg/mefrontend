@@ -34,7 +34,7 @@ export default function Hero({
         <p
           data-scroll
           data-scroll-delay='0.05'
-          data-scroll-speed='1'
+          data-scroll-speed='0.09'
           data-scroll-position='top'
         >
           {image_text}
