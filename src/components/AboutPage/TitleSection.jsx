@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Använder data-scroll för att få scrolling-effekter på titel.
+
 export default function TitleSection() {
   return (
     <section className='title-section is-inview' data-scroll-section>

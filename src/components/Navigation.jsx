@@ -13,12 +13,15 @@ export default function Navigation(page) {
 
   const [isOpen, setIsOpen] = useState(false);
   const modalRef = useRef(null);
+
+  //Funktion för att kunna klicka bort varukorgen utanför
   useOnClickOutside(modalRef, () => {
     if (isOpen === true) setIsOpen(false);
   });
 
   const { cart } = useCart();
 
+  //Skapar en anpassad menulänk med gul prick under
   const MenuLink = ({ page }) => {
     const title = page.toUpperCase();
 
@@ -30,7 +33,6 @@ export default function Navigation(page) {
       >
         {title}
         <div className='navlink-dot'>·</div>
-        <div className='navlink-mobile'></div>
       </NavLink>
     );
   };
@@ -74,6 +76,8 @@ export default function Navigation(page) {
           <div />
         )}
 
+        {/* mobilmenyn */}
+
         <div className='mobile-menu' onClick={handleClick}>
           {click ? (
             <button className='m-dots on'>
@@ -85,6 +89,9 @@ export default function Navigation(page) {
             </button>
           )}
         </div>
+
+        {/* varukorgen */}
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

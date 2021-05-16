@@ -3,6 +3,7 @@ import { useCart } from '../../contexts/use-cart';
 import { Link } from 'react-router-dom';
 
 export default function Cart({ setIsOpen }) {
+  //hämtar alla funktioner från context API, med usereducer hook
   const {
     addItem,
     removeItem,

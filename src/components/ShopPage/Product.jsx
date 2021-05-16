@@ -4,6 +4,7 @@ import { useCart } from '../../contexts/use-cart';
 
 export default function Product({ product }) {
   const { addItem, countItemsInCart, removeItem, stockValue } = useCart();
+  //hämtar alla funktioner från context API, med usereducer hook
 
   const productValue = () => {
     const value = stockValue(product.stock, product.id);
