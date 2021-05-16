@@ -96,7 +96,7 @@
       font-style: italic;
       text-decoration: none;
       text-align: center;
-      color: black;
+      color: #e1e1bd52;
       line-height: 40px;
       transition: color 0.6s ease;
 
@@ -120,6 +120,10 @@
 
       &:hover .navlink-dot {
         opacity: 1;
+
+        @media (max-width: $laptop) {
+          opacity: 0;
+        }
       }
     }
 
@@ -133,11 +137,69 @@
       }
     }
 
+    .navlink-dot-active {
+      @media (max-width: $laptop) {
+        color: $oliv-green;
+        position: relative;
+        &::before {
+          content: '';
+          background: url('../assets/greenbowls.png') no-repeat;
+          background-size: cover;
+          display: block;
+          width: 50px;
+          height: 30px;
+          position: absolute;
+          top: 20%;
+          left: -17vw;
+          transform: rotate(-90deg);
+
+          @media (min-width: $ipad) {
+            width: 70px;
+            height: 50px;
+            top: 28%;
+            left: -11vw;
+          }
+        }
+        &::after {
+          content: '';
+          background: url('../assets/greenbowls.png') no-repeat;
+          background-size: cover;
+          display: block;
+          width: 50px;
+          height: 30px;
+          position: absolute;
+          top: 20%;
+          right: -17vw;
+          transform: rotate(90deg);
+          @media (min-width: $ipad) {
+            width: 70px;
+            height: 50px;
+            top: 18%;
+            right: -11vw;
+          }
+        }
+      }
+    }
+
     .navlink-dot-active > .navlink-dot {
       margin-top: -0.1rem;
       display: block;
       opacity: 1;
+
+      @media (max-width: $laptop) {
+        opacity: 0;
+      }
     }
+
+    // .navlink-dot-active > .navlink-mobile {
+    //   width: 100px;
+    //   height: 100px;
+    //   background-color: $oliv-green;
+
+    //   @media (min-width: $laptop) {
+    //     display: none;
+    //   }
+    // }
 
     .navlink-dot {
       margin-top: -0.1rem;

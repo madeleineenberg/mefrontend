@@ -30,6 +30,7 @@ export default function Navigation(page) {
       >
         {title}
         <div className='navlink-dot'>·</div>
+        <div className='navlink-mobile'></div>
       </NavLink>
     );
   };
