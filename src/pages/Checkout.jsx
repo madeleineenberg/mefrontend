@@ -7,7 +7,7 @@ import SuccessModal from '../components/Checkout/SuccessModal';
 export default function Checkout() {
   const { cartGroupedByItems, totalPrice } = useCart();
   const [total, setTotal] = useState(null);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   const getShipping = () => {
     if (totalPrice >= 1000) {
@@ -69,6 +69,9 @@ export default function Checkout() {
               <span> {total && total} SEK</span>
             </div>
           </div>
+          <div className='warning'>
+            <p>FYI, this is only a demo version, no purchase is available!</p>
+          </div>
           {total && (
             <PayPalButton
               total={total}
@@ -80,8 +83,8 @@ export default function Checkout() {
       ) : (
         <div>Your cart is empty</div>
       )}
-      <Link className='close-btn' to='/shop'>
-        Close
+      <Link to='/shop'>
+        <button className='close-btn'>close</button>
       </Link>
       {showModal && <SuccessModal setShowModal={setShowModal} />}
     </section>

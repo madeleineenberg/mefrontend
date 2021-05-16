@@ -5,7 +5,7 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  padding-bottom: 20%;
+  padding: 20% 5%;
   overflow-y: scroll;
   overflow-x: hidden;
   display: flex;
@@ -13,10 +13,18 @@
 
   align-items: center;
 
+  @media screen and (min-width: $ipad) {
+    padding: 0 0 20% 0;
+  }
+
   h1 {
     @include yellow-title;
-    font-size: 58px;
+    font-size: 38px;
     padding-top: 10%;
+
+    @media screen and (min-width: $ipad) {
+      font-size: 58px;
+    }
   }
 
   .checkout-text {
@@ -26,6 +34,10 @@
     font-size: 12px;
     padding: 10px;
     text-transform: uppercase;
+    text-align: center;
+    @media screen and (min-width: $ipad) {
+      text-align: left;
+    }
   }
 
   .checkout-item {
@@ -85,17 +97,39 @@
     margin: 10px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    outline: $matte-black;
+    background-color: $matte-black;
     font-size: 12px;
     font-weight: 700;
-    cursor: pointer;
-    background-color: $matte-black;
     color: $creme-white;
+    cursor: pointer;
+    padding: 20px 50px;
+    transition: all 0.5s ease;
     border: none;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: inset 0px 0px 0px $creme-white;
+
+    &:hover {
+      box-shadow: inset 0px -80px 0px $creme-white;
+      color: $mustard-yellow;
+    }
+    &:focus {
+      outline: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: $creme-white;
+      transition: all 0.5s ease;
+
+      &:hover {
+        color: $mustard-yellow;
+      }
+    }
+  }
+
+  .warning {
+    p {
+      color: coral;
+    }
   }
 
   &::-webkit-scrollbar {
