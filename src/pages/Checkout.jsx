@@ -69,9 +69,6 @@ export default function Checkout() {
               <span> {total && total} SEK</span>
             </div>
           </div>
-          <div className='warning'>
-            <p>FYI, this is only a demo version, no purchase is available!</p>
-          </div>
           {total && (
             <PayPalButton
               total={total}
